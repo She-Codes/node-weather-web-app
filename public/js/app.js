@@ -7,7 +7,7 @@ const fetchWeather = (location) => {
   messageOne.textContent = 'loading...'
   messageTwo.textContent = ''
   
-  fetch(`${window.location.protocol}//${window.location.host}/weather?address=${location}`)
+  fetch(`/weather?address=${location}`)
   .then((response) => {
     response.json().then((data) => {
       if (data.error) {
